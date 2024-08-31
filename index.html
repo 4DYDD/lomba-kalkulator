@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex justify-center items-center py-[5rem]">
+    <div class="flex justify-center items-center"><img class="w-[5rem]" src="poltek.jpeg" alt="poltek">
+      <p class="ms-5 mr-10">Poliban untuk yang Terbaik.</p>
+    </div>
+    <div class="flex justify-center items-center flex-col">
+      <div class="hasil text-end w-full text-[1.5rem] me-3 mb-5">0</div>
+      <div class="flex justify-center items-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('1')">1</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('2')">2</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('3')">3</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('÷')">&divide;</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('4')">4</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('5')">5</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('6')">6</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('-')">&minus;</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('7')">7</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('8')">8</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('9')">9</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('+')">&plus;</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="hitung()">&equals;</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('0')">0</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-red-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="hapus()">&rightarrow;</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('x')">&times;</button>
+      </div>
+      <div class="flex justify-end items-center w-full">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="bersihkan()">C</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let hasil = document.querySelector(`.hasil`);
+
+    function addInput(value) {
+      if (hasil.innerText == '0') {
+        hasil.innerText = '';
+      }
+      hasil.innerText += value;
+    }
+
+    function bersihkan() {
+      hasil.innerText = '0';
+    }
+
+    function hapus() {
+      hasil.innerText = hasil.innerText.slice(0, -1);
+      if (hasil.innerText == '') {
+        hasil.innerText = '0';
+      }
+    }
+
+    function hitung() {
+      let result = hasil.innerText.replace(/x/g, "*").replace(/÷/g, "/");
+      try {
+        hasil.innerText = eval(result);
+      } catch (e) {
+        hasil.innerText = 'gagal menghitung';
+      }
+    }
+  </script>
+
+</body>
+
+</html>
