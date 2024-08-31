@@ -9,38 +9,39 @@
 </head>
 
 <body>
-  <main class="flex justify-center items-center py-[5rem]">
-    <div class="flex justify-center items-center"><img class="w-[5rem]" src="poltek.jpeg" alt="poltek">
-      <p class="ms-5 mr-10">Poliban untuk yang Terbaik.</p>
+  <main class="flex justify-center items-center py-[5rem] flex-col">
+    <div class="flex flex-col items-center justify-center mb-5">
+      <img class="w-[5rem]" src="poltek.jpeg" alt="poltek">
+      <p class="text-center">Poliban untuk yang Terbaik</p>
     </div>
-    <div class="flex justify-center items-center flex-col">
-      <div class="hasil text-end w-full text-[1.5rem] me-3 mb-5">0</div>
-      <div class="flex justify-center items-center">
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('1')">1</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('2')">2</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('3')">3</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('÷')">&divide;</button>
+    <div class="flex flex-col items-center justify-center">
+      <div class="hasil text-end w-full text-[1.5rem] mb-5 bg-slate-100 rounded-md p-3 shadow">0</div>
+      <div class="flex items-center justify-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('1')">1</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('2')">2</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('3')">3</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('÷')">&divide;</button>
       </div>
-      <div class="flex justify-center items-center">
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('4')">4</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('5')">5</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('6')">6</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('-')">&minus;</button>
+      <div class="flex items-center justify-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('4')">4</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('5')">5</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('6')">6</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('-')">&minus;</button>
       </div>
-      <div class="flex justify-center items-center">
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('7')">7</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('8')">8</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('9')">9</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('+')">&plus;</button>
+      <div class="flex items-center justify-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('7')">7</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('8')">8</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('9')">9</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('+')">&plus;</button>
       </div>
-      <div class="flex justify-center items-center">
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="hitung()">&equals;</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('0')">0</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-red-700 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="hapus()">&rightarrow;</button>
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="addInput('x')">&times;</button>
+      <div class="flex items-center justify-center">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="hitung()">&equals;</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] bg-green-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('0')">0</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-red-700 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="hapus()">&rightarrow;</button>
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font-semibold bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="addInput('x')">&times;</button>
       </div>
-      <div class="flex justify-end items-center w-full">
-        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow m-1" onclick="bersihkan()">C</button>
+      <div class="flex items-center justify-end w-full">
+        <button class="scale-100 active:scale-95 transition-all duration-100 ease-in-out w-[4rem] h-[3rem] text-[1.3rem] font bg-yellow-500 text-white flex justify-center items-center rounded-lg shadow shadow-gray-500 m-1" onclick="bersihkan()">C</button>
       </div>
     </div>
   </main>
